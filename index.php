@@ -32,19 +32,19 @@ public function __construct()
 }
 class functions
 
-{       
+{       //replacing a specific character with another character
         public function replace_char($date)
         {
-          echo "<h2>1. Replacing “-“ in $date with “/“ </h2>";
+          echo "<h2>2. Replacing “-“ in $date with “/“ </h2>";
           echo "New date format: " . str_replace("-","/",$date);
           echo "<br>";
           echo "<hr>";
         }
 
-
+        //comparing two strings
         public function compare_strings($date,$tar)
         {
-          echo "<h2>2. Comparing $date with $tar using if-elseif statement </h2>";
+          echo "<h2>3. Comparing $date with $tar using if-elseif statement </h2>";
           $result = strcmp($date,$tar);
 
           if($result>0)
@@ -58,9 +58,10 @@ class functions
         echo "<hr>";
         }
        
+       //find certain positions in a string
        public function find_position($date)
        {
-         echo "<h2>3. Printing out all positions of “/“ in $date </h2>";  
+         echo "<h2>4. Printing out all positions of “/“ in $date </h2>";  
          
          for($i=0; $i<substr_count($date,"/");$i++)
          {
@@ -71,10 +72,11 @@ class functions
          }
          echo "<hr>";
        }
-
+        
+        //counting the number of words in a string
         public function string_count($date)
         {
-          echo "<h2>4. Counting the numbers of words in $date </h2>";
+          echo "<h2>5. Counting the numbers of words in $date </h2>";
         
           $strcount=str_word_count($date);
           echo "Number of words: " . $strcount;
@@ -82,27 +84,29 @@ class functions
           echo "<hr>";
         }
 
-
+        //returning the string length
         public function string_length($date)
         {
-          echo "<h2>5. Returning the length of a string </h2>";
+          echo "<h2>6. Returning the length of a string </h2>";
           $a=strlen($date);
           echo "Length of the string is: " . $a;
           echo "<br>";
           echo "<hr>";
         }
-
+        
+        //finding ascii value
         public function ascii_value($date)
         {
-          echo "<h2>6. Returning the ASCII value of the first character of a string </h2>";
+          echo "<h2>7. Returning the ASCII value of the first character of a string </h2>";
           echo "Ascii value of the first character is " . ord($date);
           echo "<br>";
           echo "<hr>";
         }
-
+        
+        //printing last two characters in a string
         public function last_char_print($date)
         {
-          echo "<h2>7. Returning the last two characters in $date </h2>";
+          echo "<h2>8. Returning the last two characters in $date </h2>";
           echo "Last two characters are: ";
           $array=str_split($date);
           $b=count($array);
@@ -116,9 +120,10 @@ class functions
           echo "<hr>";
         }
         
+        //breaking date into an array
         public function separator($date)
         {
-          echo "<h2>8. Breaking $date into an array and setting “separator” parameter as “/“ </h2>"; 	
+          echo "<h2>9. Breaking $date into an array and setting “separator” parameter as “/“ </h2>"; 	
           echo "The separated date is: ";
           $array1=(explode("/",($date)));
           $c=count($array1);
@@ -130,9 +135,10 @@ class functions
           echo "<hr>";
         }
 
+        //finding leap year
         public function leap_year($year)
         {
-          echo "<h2>9. Identifying whether each year is a leap year </h2>";
+          echo "<h2>10. Identifying whether each year is a leap year </h2>";
           foreach($year as $value)
           {
             for($i=0;$i<1;$i++)
